@@ -1,0 +1,58 @@
+<LoginScreen>
+    name: 'login'
+    
+   
+    MDFloatLayout:
+        md_bg_color: '#f5bb27cc'
+    Image:
+        source:'images/Logo.png'
+        pos_hint: {"center_x": .5, "center_y": .7}
+    MDLabel:
+        text: 'Login'
+    
+    MDFloatLayout:
+        size_hint: .7, .7
+        TextInput:
+            hint_text: "Email"
+            foreground_color: 0, 0, 0, 1
+            cursor_color: 0, 0, 59, 255
+            pos_hint: {"center_x": .2, "center_y": .5}
+            font_size: "14sp"
+            cursor_width: "2sp"
+            multiline: False
+    
+    MDFloatLayout:
+        size_hint: .7, .7
+        TextInput:
+            int_text: "Senha"
+            size_hint: .9, .2
+            pos_hint: {"center_x": .4, "center_y": .12}
+            foreground_color: 0, 0, 0, 1
+            multiline: False
+            password: True
+    Button:
+        text: "LOGIN"
+        size_hint: .9, .2
+        pos_hint: {"center_x": .4, "center_y": .15}
+        background: 0, 0, 0, 0
+        on_release:
+            root.manager.transition.direction = "left"
+            root.manager.current = "principal"
+
+<PrincipalScreen>
+    name: 'principal'
+
+<CookieScreen>
+    name: 'cookie'
+
+<BrownieScreen>
+    name: 'brownie' 
+
+<BolopoteScreen>
+    name:'bolopote'
+
+
+    
+
+   
+
